@@ -11,7 +11,7 @@ public class BajdandesignHerokuApplication {
 	
 	@GetMapping("/")
 	public String sayHi() {
-		return "Hello 123";
+		return "Hello 123567890";
 	}
 
 	public static void main(String[] args) {
