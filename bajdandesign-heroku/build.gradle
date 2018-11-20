@@ -11,8 +11,7 @@ buildscript {
 }
 
 apply plugin: 'java'
-//apply plugin: 'eclipse'
-apply plugin: 'eclipse-wtp'
+apply plugin: 'eclipse'
 apply plugin: 'org.springframework.boot'
 apply plugin: 'io.spring.dependency-management'
 
@@ -26,9 +25,7 @@ repositories {
 
 
 dependencies {
-	//implementation('org.springframework.boot:spring-boot-starter-web')
-	implementation 'org.springframework.boot:spring-boot-starter-web'
-	implementation 'org.springframework.boot:spring-boot-devtools'
+	implementation('org.springframework.boot:spring-boot-starter-web')
 	
 	testImplementation('org.springframework.boot:spring-boot-starter-test')
 }
