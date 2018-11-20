@@ -44,10 +44,4 @@ dependencies {
 	testImplementation('org.springframework.boot:spring-boot-starter-test:2.0.5.RELEASE')
 }
 
-/*
-mainClassName = "com.bajdandesign.BajdandesignHerokuApplication"
-
-task stage {
-  dependsOn installDist
-} */
 
