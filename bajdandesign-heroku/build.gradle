@@ -1,6 +1,6 @@
 buildscript {
 	ext {
-		springBootVersion = '2.1.0.RELEASE'
+		springBootVersion = '2.0.5.RELEASE'
 	}
 	repositories {
 		mavenCentral()
@@ -11,21 +11,43 @@ buildscript {
 }
 
 apply plugin: 'java'
-apply plugin: 'eclipse'
+apply plugin: 'eclipse-wtp'
 apply plugin: 'org.springframework.boot'
 apply plugin: 'io.spring.dependency-management'
+//apply plugin: 'application'
 
 group = 'com.bajdandesign'
-version = '0.0.1-SNAPSHOT'
+version = '0.0.1'
 sourceCompatibility = 1.8
 
 repositories {
 	mavenCentral()
 }
 
+/*
+jar {
+    baseName = 'bajdandesign'
+    version = '0.0.1'
+} */
 
-dependencies {
-	implementation('org.springframework.boot:spring-boot-starter-web')
-	
-	testImplementation('org.springframework.boot:spring-boot-starter-test')
+configurations {
+	providedRuntime
 }
+
+dependencies {		
+	compile 'org.springframework.boot:spring-boot-starter-web'
+    compile 'org.springframework.boot:spring-boot-devtools'
+ 
+	providedRuntime 'org.springframework.boot:spring-boot-starter-tomcat:2.0.5.RELEASE'
+	providedRuntime 'org.apache.tomcat.embed:tomcat-embed-jasper:8.5.14'
+
+	testImplementation('org.springframework.boot:spring-boot-starter-test:2.0.5.RELEASE')
+}
+
+/*
+mainClassName = "com.bajdandesign.BajdandesignHerokuApplication"
+
+task stage {
+  dependsOn installDist
+} */
+
