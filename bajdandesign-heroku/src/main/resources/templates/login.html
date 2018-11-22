@@ -1,0 +1,154 @@
+<!-- <%@ page contentType="text/html;charset=utf8"%>
+<%@ taglib uri="http://java.sun.com/jstl/core" prefix="c"%> -->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>jQuery lightGallery demo</title>
+        <link href="js/dist/lightgallery/css/lightgallery.css" rel="stylesheet">
+        <link href="css/login.css" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <script src="js/login.js"></script>
+    </head>
+    <body class="home">
+    	<div class="header">
+    		<select id="galleryselector" onClick="gallerySelector()">
+			  <option value="ring">Ring</option>
+			  <option value="pedant">Pendant</option>
+			  <option value="necklace">Necklace</option>
+			  <option value="earring">Earrings</option>
+			  <option value="misc">Misc</option>
+			</select>
+    	</div>
+        <div class="demo-gallery">
+            <ul id="lightgallery" class="list-unstyled row">
+
+                <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="pic/bDU1XUgdSHC+F7N0sPpnTw_thumb_4caa.jpg" 
+                data-src="pic/bDU1XUgdSHC+F7N0sPpnTw_thumb_4caa.jpg" data-sub-html="<h4>Title</h4><p>Message</p>">
+                    <a href="">
+                        <img class="img-responsive" src="pic/bDU1XUgdSHC+F7N0sPpnTw_thumb_4caa.jpg">
+                    </a>
+                </li>
+                <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="pic/bfiNSghsS0KOGzdtRuUUhA_thumb_4cb4.jpg" 
+                data-src="pic/bfiNSghsS0KOGzdtRuUUhA_thumb_4cb4.jpg" data-sub-html="<h4>Title</h4><p>Message</p>">
+                    <a href="">
+                        <img class="img-responsive" src="pic/bfiNSghsS0KOGzdtRuUUhA_thumb_4cb4.jpg">
+                    </a>
+                </li>
+                <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="pic/npy5dngQQZmzFqKR8OaRYQ_thumb_4cc0.jpg" 
+                data-src="pic/npy5dngQQZmzFqKR8OaRYQ_thumb_4cc0.jpg" data-sub-html="<h4>Title</h4><p>Message</p>">
+                    <a href="">
+                        <img class="img-responsive" src="pic/npy5dngQQZmzFqKR8OaRYQ_thumb_4cc0.jpg">
+                    </a>
+                </li>
+                <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="pic/nR7V8m6aTLSYzsVsUC0eEQ_thumb_4ca6.jpg" 
+                data-src="pic/nR7V8m6aTLSYzsVsUC0eEQ_thumb_4ca6.jpg" data-sub-html="<h4>Title</h4><p>Message</p>">
+                    <a href="">
+                        <img class="img-responsive" src="pic/nR7V8m6aTLSYzsVsUC0eEQ_thumb_4ca6.jpg">
+                    </a>
+                </li>
+                <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="pic/p+OYLzmsRHOKxNP5a3juYA_thumb_4cb8.jpg" 
+                data-src="pic/p+OYLzmsRHOKxNP5a3juYA_thumb_4cb8.jpg" data-sub-html="<h4>Title</h4><p>Message</p>">
+                    <a href="">
+                        <img class="img-responsive" src="pic/p+OYLzmsRHOKxNP5a3juYA_thumb_4cb8.jpg">
+                    </a>
+                </li>
+                <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="pic/qVtmqZzySPGcXFZ7C36OVw_thumb_4ca3.jpg" 
+                data-src="pic/qVtmqZzySPGcXFZ7C36OVw_thumb_4ca3.jpg" data-sub-html="<h4>Title</h4><p>Message</p>">
+                    <a href="">
+                        <img class="img-responsive" src="pic/qVtmqZzySPGcXFZ7C36OVw_thumb_4ca3.jpg">
+                    </a>
+                </li>
+                <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="pic/Rs9mqQidTL6EJnDY32j5kw_thumb_4e2e.jpg" 
+                data-src="pic/Rs9mqQidTL6EJnDY32j5kw_thumb_4e2e.jpg" data-sub-html="<h4>Title</h4><p>Message</p>">
+                    <a href="">
+                        <img class="img-responsive" src="pic/Rs9mqQidTL6EJnDY32j5kw_thumb_4e2e.jpg">
+                    </a>
+                </li>
+                <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="pic/UNADJUSTEDNONRAW_thumb_2a01.jpg" 
+                data-src="pic/UNADJUSTEDNONRAW_thumb_2a01.jpg" data-sub-html="<h4>Title</h4><p>Message</p>">
+                    <a href="">
+                        <img class="img-responsive" src="pic/UNADJUSTEDNONRAW_thumb_2a01.jpg">
+                    </a>
+                </li>
+                <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="pic/UNADJUSTEDNONRAW_thumb_2a03.jpg" 
+                data-src="pic/UNADJUSTEDNONRAW_thumb_2a03.jpg" data-sub-html="<h4>Title</h4><p>Message</p>">
+                    <a href="">
+                        <img class="img-responsive" src="pic/UNADJUSTEDNONRAW_thumb_2a03.jpg">
+                    </a>
+                </li>
+                <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="pic/UNADJUSTEDNONRAW_thumb_2a05.jpg" 
+                data-src="pic/UNADJUSTEDNONRAW_thumb_2a05.jpg" data-sub-html="<h4>Title</h4><p>Message</p>">
+                    <a href="">
+                        <img class="img-responsive" src="pic/UNADJUSTEDNONRAW_thumb_2a05.jpg">
+                    </a>
+                </li>
+                <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="pic/UNADJUSTEDNONRAW_thumb_2a0b.jpg" 
+                data-src="pic/UNADJUSTEDNONRAW_thumb_2a0b.jpg" data-sub-html="<h4>Title</h4><p>Message</p>">
+                    <a href="">
+                        <img class="img-responsive" src="pic/UNADJUSTEDNONRAW_thumb_2a0b.jpg">
+                    </a>
+                </li>
+                <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="pic/UNADJUSTEDNONRAW_thumb_2a0d.jpg" 
+                data-src="pic/UNADJUSTEDNONRAW_thumb_2a0d.jpg" data-sub-html="<h4>Title</h4><p>Message</p>">
+                    <a href="">
+                        <img class="img-responsive" src="pic/UNADJUSTEDNONRAW_thumb_2a0d.jpg">
+                    </a>
+                </li>
+                <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="pic/UNADJUSTEDNONRAW_thumb_2a0f.jpg" 
+                data-src="pic/UNADJUSTEDNONRAW_thumb_2a0f.jpg" data-sub-html="<h4>Title</h4><p>Message</p>">
+                    <a href="">
+                        <img class="img-responsive" src="pic/UNADJUSTEDNONRAW_thumb_2a0f.jpg">
+                    </a>
+                </li>
+                <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="pic/UNADJUSTEDNONRAW_thumb_2a1b.jpg" 
+                data-src="pic/UNADJUSTEDNONRAW_thumb_2a1b.jpg" data-sub-html="<h4>Title</h4><p>Message</p>">
+                    <a href="">
+                        <img class="img-responsive" src="pic/UNADJUSTEDNONRAW_thumb_2a1b.jpg">
+                    </a>
+                </li>
+                <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="pic/UNADJUSTEDNONRAW_thumb_2a2b.jpg" 
+                data-src="pic/UNADJUSTEDNONRAW_thumb_2a2b.jpg" data-sub-html="<h4>Title</h4><p>Message</p>">
+                    <a href="">
+                        <img class="img-responsive" src="pic/UNADJUSTEDNONRAW_thumb_2a2b.jpg">
+                    </a>
+                </li>
+                <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="pic/UNADJUSTEDNONRAW_thumb_2a2d.jpg" 
+                data-src="pic/UNADJUSTEDNONRAW_thumb_2a2d.jpg" data-sub-html="<h4>Title</h4><p>Message</p>">
+                    <a href="">
+                        <img class="img-responsive" src="pic/UNADJUSTEDNONRAW_thumb_2a2d.jpg">
+                    </a>
+                </li>
+                <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="pic/UNADJUSTEDNONRAW_thumb_2a2f.jpg" 
+                data-src="pic/UNADJUSTEDNONRAW_thumb_2a2f.jpg" data-sub-html="<h4>Title</h4><p>Message</p>">
+                    <a href="">
+                        <img class="img-responsive" src="pic/UNADJUSTEDNONRAW_thumb_2a2f.jpg">
+                    </a>
+                </li>
+                <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="pic/UNADJUSTEDNONRAW_thumb_2a3b.jpg" 
+                data-src="pic/UNADJUSTEDNONRAW_thumb_2a3b.jpg" data-sub-html="<h4>Title</h4><p>Message</p>">
+                    <a href="">
+                        <img class="img-responsive" src="pic/UNADJUSTEDNONRAW_thumb_2a3b.jpg">
+                    </a>
+                </li>
+                <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="pic/UNADJUSTEDNONRAW_thumb_2a3d.jpg" 
+                data-src="pic/UNADJUSTEDNONRAW_thumb_2a3d.jpg" data-sub-html="<h4>Title</h4><p>Message</p>">
+                    <a href="">
+                        <img class="img-responsive" src="pic/UNADJUSTEDNONRAW_thumb_2a3d.jpg">
+                    </a>
+                </li>                
+                
+            </ul>
+        </div>
+        
+        
+        <script type="text/javascript">
+        $(document).ready(function(){
+            $('#lightgallery').lightGallery();
+        });
+        </script>
+        <script src="https://cdn.jsdelivr.net/picturefill/2.3.1/picturefill.min.js"></script>
+        <script src="js/dist/lightgallery/js/lightgallery-all.min.js"></script>
+        <script src="../lib/jquery.mousewheel.min.js"></script>
+    </body>
+</html>
+    

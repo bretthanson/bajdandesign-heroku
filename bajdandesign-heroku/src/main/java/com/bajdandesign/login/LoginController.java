@@ -9,14 +9,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping("/")
 public class LoginController {
 	
-	@GetMapping("/hello")
-	public String hello(String name, Model model) {
-
-		return "hello";
-	}
-
-	@GetMapping("/login")
-	public String greeting(String name, Model model) {
+	@GetMapping("/")
+	public String login(String name, Model model) {
 		System.out.println("login");
 		return "login";
 	}
